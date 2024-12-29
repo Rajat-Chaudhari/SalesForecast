@@ -1,0 +1,164 @@
+{
+    "model_params": {
+      "ARIMA": {
+        "p": [0, 5],
+        "d": [0, 2],
+        "q": [0, 5]
+      },
+      "SARIMA": {
+        "p": [0, 5],
+        "d": [0, 2],
+        "q": [0, 5],
+        "P": [0, 2],
+        "D": [0, 1],
+        "Q": [0, 2],
+        "m": [1, 12]
+      },
+      "Univariate-Prophet": {
+        "seasonality_mode": ["additive", "multiplicative"],
+        "seasonality_prior_scale": [0.01, 10],
+        "changepoint_prior_scale": [0.001, 0.5]
+      },
+      "ETS": {
+        "trend": ["add", "mul", null],
+        "seasonal": ["add", "mul", null],
+        "seasonal_periods": [4, 12, 24],
+        "damped_trend": [true, false]
+      },
+      "AR": {
+        "lags": [1, 15]
+      },
+      "Univariate-TBATS": {
+        "use_box_cox": [true, false],
+        "use_trend": [true, false],
+        "use_damped_trend": [true, false],
+        "seasonal_periods": [1, 12, 24],
+        "use_arma_errors": [true, false],
+        "n_jobs": [1, 8]
+      },
+      "Univariate-LSTM": {
+        "n_input": [1, 10],
+        "n_features": [1, 10],
+        "n_units": [50, 200],
+        "dropout_rate": [0.1, 0.5],
+        "epochs": [50, 500],
+        "batch_size": [16, 64]
+      },
+      "LinearRegressor": {
+        "fit_intercept": [true, false],
+        "normalize": [true, false]
+      },
+      "ElasticNet": {
+        "alpha": [0.0001, 1.0],
+        "l1_ratio": [0, 1],
+        "max_iter": [1000, 5000],
+        "fit_intercept": [true, false]
+      },
+      "RandomForest": {
+        "n_estimators": [10, 500],
+        "max_depth": [1, 20],
+        "min_samples_split": [2, 10],
+        "min_samples_leaf": [1, 4]
+      },
+      "XGBoost": {
+        "objective": ["reg:squarederror"],
+        "learning_rate": [0.01, 0.3],
+        "max_depth": [3, 10],
+        "n_estimators": [100, 1000],
+        "subsample": [0.5, 1.0]
+      },
+      "LightGBM": {
+        "objective": ["regression"],
+        "learning_rate": [0.01, 0.2],
+        "num_leaves": [31, 128],
+        "n_estimators": [100, 1000],
+        "max_depth": [-1, 50],
+        "subsample": [0.5, 1.0]
+      },
+      "CatBoost": {
+        "iterations": [100, 1000],
+        "learning_rate": [0.01, 0.3],
+        "depth": [4, 10],
+        "subsample": [0.5, 1.0]
+      },
+      "SVR": {
+        "kernel": ["linear", "rbf", "poly"],
+        "C": [0.1, 100],
+        "epsilon": [0.01, 0.1],
+        "gamma": ["scale", "auto"]
+      },
+      "TFT": {
+        "Hidden Size": [8, 512],
+        "Dropout Rate": [0.0, 0.5],
+        "Attention Heads": [1, 8],
+        "Learning Rate": [1e-5, 1e-3],
+        "Batch Size": [64, 256],
+        "Epochs": [50, 300],
+        "Max Encoder Length": [12, 24],
+        "Max Prediction Length": [1, 12],
+        "Gradient Clip Value": [0.01, 1.0]
+      },
+      "N-BEATS": {
+        "Width of Forecasting Blocks": [32, 512],
+        "Learning Rate": [1e-5, 1e-3],
+        "Weight Decay": [1e-4, 1e-2],
+        "Backcast Loss Ratio": [0.1, 1.0],
+        "Batch Size": [64, 256],
+        "Max Epochs": [3, 100]
+      },
+      "GRU": {
+        "Units": [32, 512],
+        "Dropout Rate": [0.0, 0.5],
+        "Learning Rate": [1e-4, 1e-2],
+        "Batch Size": [32, 128],
+        "Epochs": [50, 300],
+        "Timesteps": [10, 100],
+        "Optimizer": ["Adam", "RMSProp"]
+      },
+      "CNN-LSTM": {
+        "Filters (CNN)": [32, 128],
+        "Kernel Size (CNN)": [3, 5],
+        "Units (LSTM)": [50, 200],
+        "Dropout Rate": [0.0, 0.5],
+        "Learning Rate": [1e-4, 1e-2],
+        "Batch Size": [32, 128],
+        "Epochs": [50, 300],
+        "Timesteps": [10, 100],
+        "Optimizer": ["Adam", "RMSProp"]
+      },
+      "VAR": {
+        "p": [1, 12],
+        "trend": ["c", "ct", "ctt", "nc"],
+        "maxlags": [1, 15]
+      },
+      "VARMA": {
+        "p": [0, 5],
+        "q": [0, 5],
+        "include_mean": [true, false],
+        "thres": [1, 5]
+      },
+      "VARIMA": {
+        "p": [1, 5],
+        "d": [0, 2],
+        "q": [1, 5],
+        "include_mean": [true, false]
+      },
+      "BVAR": {
+        "p": [1, 12],
+        "λ_1": [0.1, 1.0],
+        "λ_2": [0.5, 1.0],
+        "λ_3": [0.1, 1.0]
+      },
+      "FullyConnected": {
+        "learning_rate": [0.0001, 0.1],    
+        "batch_size": [16, 128],          
+        "epochs": [20, 100],               
+        "activation": ["relu", "sigmoid", "tanh", "softplus"],  
+        "optimizer": ["SGD", "Adam", "RMSprop"], 
+        "dropout_rate": [0.1, 0.5],        
+        "n_layers": [2, 10],               
+        "n_neurons": [32, 512]             
+      }
+    }
+  }
+  

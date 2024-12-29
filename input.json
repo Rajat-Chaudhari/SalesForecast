@@ -1,0 +1,10 @@
+{
+    "file_path" : "AOD_RS_OFFICIAL_DATA.csv",
+    "target_col" : "Sales",
+    "date_col" : "Date",
+    "model_type" : "univariate",
+    "mode" : "manual",
+    "training_data_size" : 80,
+    "freq" : "M" ,
+    "selected_model_lst" : ["Univariate-Prophet","ETS","AR","Univariate-TBATS","Univariate-LSTM"]
+}

@@ -1,0 +1,28 @@
+{
+  "file_not_found": 
+    {
+      "1": "The file does not exist.",
+      "2": "File format not supported. Please provide a CSV or Excel file.",
+      "3": "The DataFrame does not contain the required target column.",
+      "4": "The DataFrame does not contain the required date/time column.",
+      "5": "Not enough data for training.",
+      "6": "Internal server error.",
+      "7": "None of the models are available in the repository.",
+      "8": "Invalid model selection.",
+      "9": "Not enough columns to plot chart",
+      "10":"Not a valid metrics",
+      "11": "Invalid kpi range"
+    },
+    "invalid_input": 
+    {
+          "1": "The file path is invalid or missing.",
+          "2": "The target column name contains invalid characters.",
+          "3": "The date column name contains invalid characters.",
+          "4": "The model type must be 'univariate' or 'multivariate'.",
+          "5": "The mode must be 'manual' or 'auto'.",
+          "6": "Training data size must be a valid integer between 0 and 100.",
+          "7": "The frequency (freq) must be a valid string (like 'D', 'W', 'M').",
+          "8": "The selected model list contains invalid entries or is missing."
+    }
+  }
+  
